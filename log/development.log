@@ -377,3 +377,19 @@ Processing by SchoolClassesController#index as HTML
   [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT "school_classes".* FROM "school_classes"[0m
   Rendered school_classes/index.html.erb within layouts/application (1.3ms)
 Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/new" for 162.204.192.175 at 2018-11-17 14:38:29 +0000
+Processing by SchoolClassesController#new as HTML
+  Rendered school_classes/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/school_classes" for 162.204.192.175 at 2018-11-17 14:38:35 +0000
+Processing by SchoolClassesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aWeq+wddPCuuwNL0Jaw/BGdkLvHzVtRmADVMqpUbxBrRtMFenXvPTTVQZUydwLKJbnm55p3MY5voiolyo7OGgg==", "school_class"=>{"title"=>"English", "room_number"=>"456"}, "commit"=>"Create School class"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "school_classes" ("title", "room_number", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "English"], ["room_number", 456], ["created_at", "2018-11-17 14:38:35.523125"], ["updated_at", "2018-11-17 14:38:35.523125"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to http://67.205.130.239:32922/school_classes/2
+Completed 302 Found in 7ms (ActiveRecord: 3.1ms)
