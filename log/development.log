@@ -393,3 +393,30 @@ Processing by SchoolClassesController#create as HTML
   [1m[35m (2.6ms)[0m  commit transaction
 Redirected to http://67.205.130.239:32922/school_classes/2
 Completed 302 Found in 7ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/school_classes/2" for 162.204.192.175 at 2018-11-17 14:38:35 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered school_classes/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/school_classes/2/edit" for 162.204.192.175 at 2018-11-17 14:38:41 +0000
+Processing by SchoolClassesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSchoolClass Load (0.1ms)[0m  SELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered school_classes/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/school_classes/2" for 162.204.192.175 at 2018-11-17 14:38:47 +0000
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lZTjgSaPtM4TOsizHR5QuAc/NjplwCm2MiZsKRyX0N8tR4gkvKlHqIiqfwulct01DiKhLQtankvamanxKj+SRw==", "school_class"=>{"title"=>"English", "room_number"=>"432"}, "commit"=>"Update School class", "id"=>"2"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "school_classes" SET "room_number" = ?, "updated_at" = ? WHERE "school_classes"."id" = ?[0m  [["room_number", 432], ["updated_at", "2018-11-17 14:38:47.689973"], ["id", 2]]
+  [1m[35m (76.5ms)[0m  commit transaction
+Redirected to http://67.205.130.239:32922/school_classes/2
+Completed 302 Found in 83ms (ActiveRecord: 77.1ms)
